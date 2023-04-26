@@ -123,11 +123,10 @@ then
  cd -
 fi
 
-#if ! command -v watchman &> /dev/null
-#then
-# $INSTALL_AUR brew-git
-# brew install watchman
-#fi
+if ! command -v watchman &> /dev/null
+then
+ $INSTALL_AUR watchman-bin
+fi
 
 if ! command -v flatpak &> /dev/null
 then
@@ -174,5 +173,11 @@ then
  sudo chmod +x ~/.local/bin/tmux-sessionizer
 fi
 
-
+if ! command -v docker &> /dev/null
+then
+ $INSTALL_CMD docker docker-compose
+ sudo systemctl start docker
+ sudo systemctl enable docker
+ sudo usermod -aG docker ${USER}
+fi
 

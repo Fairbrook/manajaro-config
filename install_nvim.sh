@@ -10,5 +10,5 @@ cd fonts
 cd ..
 rm -rf fonts
 # Config files
-rm -r ~/.config/nvim
+sudo rm -r ~/.config/nvim
 git clone https://github.com/Fairbrook/nvim_config.git ~/.config/nvim

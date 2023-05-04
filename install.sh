@@ -76,7 +76,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'" > ~/$ZDOTFILE
  git clone https://github.com/Fairbrook/zsh_config.git ~/.config/zsh-custom
  mv ~/.config/zsh-custom/* ~/.config/zsh
  sudo rm -r ~/.config/zsh-custom
- echo "\nsource ~/.config/zsh/config.zsh" >> ~/$ZDOTFILE
+ echo "
+  source ~/.config/zsh/config.zsh" >> ~/$ZDOTFILE
 fi
 
 if ! command -v python3 &> /dev/null

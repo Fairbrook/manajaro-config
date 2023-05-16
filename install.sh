@@ -182,3 +182,8 @@ then
  sudo usermod -aG docker ${USER}
 fi
 
+if ! command -v imgconsole &> /dev/null
+then
+    wget -O ~/.local/bin/imgconsole https://gist.githubusercontent.com/Fairbrook/f15d76a5445d4f804cd1ffa5446a9836/raw/33c365eb26894677d1a85420fff0234fcba9cae1/imgconsole
+    chmod +x ~/.local/bin/imgconsole
+fi
